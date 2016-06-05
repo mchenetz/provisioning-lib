@@ -13,80 +13,80 @@
 #######################################################################################################################
 import json
 import requests
-from .merakilibs import tzlist, getUrl
+from merakilibs import tzlist, getUrl
 
 
 def getorgdevices(apikey, organizationid):
     geturl = 'https://dashboard.meraki.com/api/v0/organizations/{0}/inventory'.format(str(organizationid))
-    getUrl(geturl, apikey)
+    return getUrl(geturl, apikey)
 
 def getnetworkdevices(apikey, networkid):
     geturl = 'https://dashboard.meraki.com/api/v0/networks/{0}/devices'.format(str(networkid))
-    getUrl(geturl, apikey)
+    return getUrl(geturl, apikey)
 
 def getorgadmins(apikey, organizationid):
     geturl = 'https://dashboard.meraki.com/api/v0/organizations/{0}/admins'.format(str(organizationid))
-    getUrl(geturl, apikey)
+    return getUrl(geturl, apikey)
 
 def getnetworklist(apikey, organizationid):
     geturl = 'https://dashboard.meraki.com/api/v0/organizations/{0}/networks'.format(str(organizationid))
-    getUrl(geturl, apikey)
+    return getUrl(geturl, apikey)
 
 def getlicensestate(apikey, organizationid):
     geturl = 'https://dashboard.meraki.com/api/v0/organizations/{0}/licenseState'.format(str(organizationid))
-    getUrl(geturl, apikey)
+    return getUrl(geturl, apikey)
 
 def getdevicedetail(apikey, networkid, serialnumber):
     geturl = 'https://dashboard.meraki.com/api/v0/networks/{0}/devices/{1}'.format(str(networkid), str(serialnumber))
-    getUrl(geturl, apikey)
+    return getUrl(geturl, apikey)
 
 def getnetworkdetail(apikey, networkid):
     geturl = 'https://dashboard.meraki.com/api/v0/networks/{0}'.format(str(networkid))
-    getUrl(geturl, apikey)
+    return getUrl(geturl, apikey)
 
 def getconfigtemplates(apikey, organizationid):
     geturl = 'https://dashboard.meraki.com/api/v0/organizations/{0}/configTemplates'.format(str(organizationid))
-    getUrl(geturl, apikey)
+    return getUrl(geturl, apikey)
 
 def getsnmpsettings(apikey, organizationid):
     geturl = 'https://dashboard.meraki.com/api/v0/organizations/{0}/snmp'.format(str(organizationid))
-    getUrl(geturl, apikey)
+    return getUrl(geturl, apikey)
 
 def getvpnpeers(apikey, organizationid):
     geturl = 'https://dashboard.meraki.com/api/v0/organizations/{0}/thirdPartyVPNPeers'.format(str(organizationid))
-    getUrl(geturl, apikey)
+    return getUrl(geturl, apikey)
 
 def getsamlroles(apikey, organizationid):
     geturl = 'https://dashboard.meraki.com/api/v0/organizations/{0}/samlRoles'.format(str(organizationid))
-    getUrl(geturl, apikey)
+    return getUrl(geturl, apikey)
 
 def getswitchstacks(apikey, networkid):
     geturl = 'https://dashboard.meraki.com/api/v0/networks/{0}/switchStacks'.format(str(networkid))
-    getUrl(geturl, apikey)
+    return getUrl(geturl, apikey)
 
 def getswitchstackmembers(apikey, networkid, stackid):
     geturl = 'https://dashboard.meraki.com/api/v0/networks/{0}/switchStacks/{1}'.format(str(networkid), str(stackid))
-    getUrl(geturl, apikey)
+    return getUrl(geturl, apikey)
 
 def getvlans(apikey, networkid):
     geturl = 'https://dashboard.meraki.com/api/v0/networks/{0}/vlans'.format(str(networkid))
-    getUrl(geturl, apikey)
+    return getUrl(geturl, apikey)
 
 def getvlandetail(apikey, networkid, vlanid):
     geturl = 'https://dashboard.meraki.com/api/v0/networks/{0}/vlans/{1}'.format(str(networkid), str(vlanid))
-    getUrl(geturl, apikey)
+    return getUrl(geturl, apikey)
 
 def gettemplates(apikey, organizationid):
     geturl = 'https://dashboard.meraki.com/api/v0/organizations/{0}/configTemplates'.format(str(organizationid))
-    getUrl(geturl, apikey)
+    return getUrl(geturl, apikey)
 
 def getnonmerakivpnpeers(apikey, organizationid):
     geturl = 'https://dashboard.meraki.com/api/v0/organizations/{0}/thirdPartyVPNPeers'.format(str(organizationid))
-    getUrl(geturl, apikey)
+    return getUrl(geturl, apikey)
 
 def getadmins(apikey, organizationid):
     geturl = 'https://dashboard.meraki.com/api/v0/organizations/{0}/admins'.format(str(organizationid))
-    getUrl(geturl, apikey)
+    return getUrl(geturl, apikey)
 
 def bindtotemplate(apikey, networkid, templateid, autobind='false'):
     posturl = 'https://dashboard.meraki.com/api/v0/networks/{0}/bind'.format(str(networkid))
