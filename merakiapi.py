@@ -52,8 +52,8 @@ def getsnmpsettings(apikey, organizationid):
     geturl = 'https://dashboard.meraki.com/api/v0/organizations/{0}/snmp'.format(str(organizationid))
     return getUrl(geturl, apikey)
 
-def getvpnpeers(apikey, organizationid):
-    geturl = 'https://dashboard.meraki.com/api/v0/organizations/{0}/thirdPartyVPNPeers'.format(str(organizationid))
+def getvpnpeers(apikey, networkid):
+    geturl = 'https://dashboard.meraki.com/api/v0/networks/{0}/siteToSiteVpn'.format(str(networkid))
     return getUrl(geturl, apikey)
 
 def getsamlroles(apikey, organizationid):
