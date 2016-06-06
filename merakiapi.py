@@ -88,6 +88,12 @@ def getadmins(apikey, organizationid):
     geturl = 'https://dashboard.meraki.com/api/v0/organizations/{0}/admins'.format(str(organizationid))
     return getUrl(geturl, apikey)
 
+def getNetworkbyName(name, apikey, organizationid):
+ for net in getnetworklist(apikey, organizationid):
+     if net['name']==name:
+         return (net['id'])
+
+
 def bindtotemplate(apikey, networkid, templateid, autobind='false'):
     posturl = 'https://dashboard.meraki.com/api/v0/networks/{0}/bind'.format(str(networkid))
     headers = {
